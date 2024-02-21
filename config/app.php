@@ -1,7 +1,11 @@
 <?php
 
+use Modules\Payment\Providers\PaymentServiceProvider;
 use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\ServiceProvider;
+use Modules\Product\Providers\ProductServiceProvider;
+use Modules\Order\Providers\OrderServiceProvider;
+use Modules\Shipment\Providers\ShipmentServiceProvider;
 
 return [
 
@@ -168,6 +172,10 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        OrderServiceProvider::class,
+        PaymentServiceProvider::class,
+        ProductServiceProvider::class,
+        ShipmentServiceProvider::class
     ])->toArray(),
 
     /*
